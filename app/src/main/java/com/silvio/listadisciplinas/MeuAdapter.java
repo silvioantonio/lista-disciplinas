@@ -43,9 +43,6 @@ public class MeuAdapter extends BaseAdapter {
             TextView texto = view.findViewById(R.id.texto);
             texto.setText(item.getInfo());
 
-            ImageView imagem = view.findViewById(R.id.imagem);
-            imagem.setImageResource(item.getFoto());
-
             return view;
         }
     }

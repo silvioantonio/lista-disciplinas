@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -24,9 +25,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listView.setOnItemClickListener(this);
 
         itens = new ArrayList<>();
-        ItemLista item1 = new ItemLista("bolo", R.drawable.ic_launcher_background);
-        ItemLista item2 = new ItemLista("sorvete", R.drawable.ic_launcher_background);
-        ItemLista item3 = new ItemLista("pizza", R.drawable.ic_launcher_background);
+        ItemLista item1 = new ItemLista("Poo");
+        ItemLista item2 = new ItemLista("Algoritmo");
+        ItemLista item3 = new ItemLista("DM 1");
 
         itens.add(item1);
         itens.add(item2);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        ItemLista item = meuAdapter.getItem(position);
+        Toast.makeText(this, "Voce clicou em: "+ item.getInfo(), Toast.LENGTH_SHORT).show();
     }
 }

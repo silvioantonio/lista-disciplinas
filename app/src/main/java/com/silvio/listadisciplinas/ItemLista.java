@@ -2,12 +2,10 @@ package com.silvio.listadisciplinas;
 
 public class ItemLista {
     private String info;
-    private int foto;
 
     public ItemLista(){}
 
-    public ItemLista(String info, int foto){
-        this.foto = foto;
+    public ItemLista(String info){
         this.info = info;
     }
 
@@ -19,11 +17,4 @@ public class ItemLista {
         this.info = info;
     }
 
-    public int getFoto() {
-        return foto;
-    }
-
-    public void setFoto(int foto) {
-        this.foto = foto;
-    }
 }
