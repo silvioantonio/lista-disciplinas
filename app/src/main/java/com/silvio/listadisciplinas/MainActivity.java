@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private ListView listView;
+    private ListView listView, preview;
     private MeuAdapter meuAdapter;
     private ArrayList<ItemLista> itens;
 
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         listView = findViewById(R.id.listaDisciplinas);
+        preview = findViewById(R.id.preview);
         listView.setOnItemClickListener(this);
 
         itens = new ArrayList<>();
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ItemLista item = meuAdapter.getItem(position);
+        itens.clear();
+        //preencher os itens com nomes dos alunos dessa disciplina
+        preview.setAdapter(new MeuAdapter(this,itens));
+
         Toast.makeText(this, "Voce clicou em: "+ item.getInfo(), Toast.LENGTH_SHORT).show();
     }
 }

@@ -18,5 +18,14 @@
         android:dividerHeight="1dp"
         android:background="@drawable/shape"/>
 
+    <ListView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/preview"
+        android:divider="#000"
+        android:dividerHeight="1dp"
+        android:background="@drawable/shape"/>
+
 
 </LinearLayout>
