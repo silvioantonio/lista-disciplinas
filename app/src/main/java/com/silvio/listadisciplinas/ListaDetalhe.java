@@ -13,8 +13,6 @@ import java.util.HashMap;
 
 public class ListaDetalhe extends AppCompatActivity {
 
-    Intent intent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

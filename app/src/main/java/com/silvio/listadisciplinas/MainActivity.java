@@ -1,7 +1,10 @@
 package com.silvio.listadisciplinas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -43,7 +46,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ItemLista item = meuAdapter.getItem(position);
         //preencher os itens com nomes dos alunos dessa disciplina
-        preview.setAdapter(new MeuAdapter(this,itens));
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmento, new MainFragment());
+        fragmentTransaction.commit();
 
         Toast.makeText(this, "Voce clicou em: "+ item.getInfo(), Toast.LENGTH_SHORT).show();
     }
