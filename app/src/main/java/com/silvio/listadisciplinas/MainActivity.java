@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ItemLista item = meuAdapter.getItem(position);
-        itens.clear();
         //preencher os itens com nomes dos alunos dessa disciplina
         preview.setAdapter(new MeuAdapter(this,itens));
 
