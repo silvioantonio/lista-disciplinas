@@ -38,9 +38,9 @@ public class MeuAdapter extends BaseAdapter {
         @Override
         public View getView(int i, View view, ViewGroup parent) {
             ItemLista item = itens.get(i);
-            view = inflater.inflate(R.layout.item_lista, null);
+            view = inflater.inflate(R.layout.lista, null);
 
-            TextView texto = view.findViewById(R.id.texto);
+            TextView texto = view.findViewById(R.id.texto_lista);
             texto.setText(item.getInfo());
 
             return view;
