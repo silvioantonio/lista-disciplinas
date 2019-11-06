@@ -19,6 +19,15 @@
         android:background="@drawable/shape"/>
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="Adicionar nova entrada!"
+        android:gravity="center"/>
+
+    <TextView
         android:id="@+id/txt0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
