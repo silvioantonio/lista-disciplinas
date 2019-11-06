@@ -18,19 +18,48 @@
         android:dividerHeight="1dp"
         android:background="@drawable/shape"/>
 
-    <FrameLayout
-        android:id="@+id/fragmento"
+    <TextView
+        android:id="@+id/txt0"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <ListView
-        android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/preview"
-        android:divider="#000"
-        android:dividerHeight="1dp"
-        android:background="@drawable/shape"/>
+        android:text="Disciplina"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtDisciplina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Professor"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtProfessor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aluno"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/txtAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10" />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:text="Add" />
 
 
 </LinearLayout>
