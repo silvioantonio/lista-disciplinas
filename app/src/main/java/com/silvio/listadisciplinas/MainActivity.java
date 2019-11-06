@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 disciplina.setText("");
                 professor.setText("");
                 aluno.setText("");
+                disciplina.clearFocus();
+                professor.clearFocus();
+                aluno.clearFocus();
                 Toast.makeText(getApplicationContext(), "Nova entrada adicionada! ", Toast.LENGTH_SHORT).show();
             }
         });
