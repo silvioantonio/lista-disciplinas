@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 String saluno = aluno.getText().toString();
                 DbHandler dbHandler = new DbHandler(MainActivity.this);
                 dbHandler.inserDisciplinaDetalhes(sdisciplina, sprofessor, saluno);
+                disciplina.setText("");
+                professor.setText("");
+                aluno.setText("");
+                Toast.makeText(getApplicationContext(), "Nova entrada adicionada! ", Toast.LENGTH_SHORT).show();
             }
         });
 
