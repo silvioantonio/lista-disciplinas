@@ -92,5 +92,26 @@ public class DbHandler extends SQLiteOpenHelper {
         return lista;
     }
 
+    //alterar por tipo de dado
+    public int updateDisciplina(String professor, String aluno) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(KEY_PROFESSOR, professor);
+        contentValues.put(KEY_ALUNO, aluno);
+
+        String query = "SELECT id FROM " + TABLE_Disciplinas + " WHERE " + KEY_PROFESSOR + "=? and " + KEY_ALUNO + "=?" ;
+        Cursor cursor = db.rawQuery(query, new String[]{professor, aluno});
+
+        int count = -1;
+
+        if(cursor.moveToNext()){
+            String id = cursor.getString(cursor.getColumnIndex(KEY_ID));
+            count = db.update(TABLE_Disciplinas, contentValues, KEY_ID + "=?", new String[]{ id });
+        }
+
+        return count;
+    }
+
+    //deletar dado
 
 }
